@@ -1,0 +1,24 @@
+{
+  "summary": [
+    ["PERMISSION MODEL", ""],
+    ["General Manager", "Edit on every library the role has access to"],
+    ["Other role groups", "Contribute"],
+    ["Auditor", "Read"],
+    ["SP - IT Admins", "Full Control on every library"]
+  ],
+  "notes": [
+    ["=== How to use this workbook ===", ""],
+    ["This workbook is the source of truth", "Changes in who has access start here."],
+    ["The matrix tab is yours", "To change which role reaches which library: add or remove a mark on the Access Matrix tab and send the file back to IT."],
+    ["Adding or removing a person", "Tell IT who, which role (a row of the matrix) and their sign-in address."],
+    ["A new role", "Add a row to the matrix and mark the libraries the role needs."],
+    ["A new library", "Add a column to the matrix and mark the roles that need it."],
+    ["Do not edit the other tabs", "They are generated from Entra ID. Editing them changes nothing in SharePoint."],
+    ["", ""],
+    ["--- CHANGELOG ---", ""],
+    ["2026-01-15", "First version of the model."]
+  ],
+  "noAccess": [
+    { "name": "Break Glass", "upn": "breakglass@contoso.co.uk", "jobTitle": "", "reason": "Emergency admin account. No role memberships on purpose." }
+  ]
+}

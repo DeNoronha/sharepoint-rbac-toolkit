@@ -1,0 +1,8 @@
+Role;Procedures;Customers;Operations;Finance;Board;Human Resources;Everyone
+General Manager;x;x;x;x;x;x;
+Finance Team;x;x;x;x;x;;
+HR Advisor;x;;;;x;x;
+Customer Service;x;x;x;;;;
+Site Managers;x;;x;;;;
+Operations Team;x;;x;;;;
+Auditor;Read;Read;Read;Read;;;

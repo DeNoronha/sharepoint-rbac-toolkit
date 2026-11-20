@@ -1,0 +1,10 @@
+Role;Management;Finance;HR;Sales;Operations;Archive
+General Manager;x;x;x;x;x;x
+Head of Finance;x;x;x;;;x
+Financial Controller;;x;;;;
+HR Manager;;;x;;;
+Head of Sales;x;;;x;;
+Account Manager;;;;x;;
+Sales Support;;;;x;x;
+Warehouse Manager;;;;;x;x
+Warehouse Employee;;;;;x;

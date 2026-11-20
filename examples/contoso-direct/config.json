@@ -1,0 +1,32 @@
+{
+  "name": "Contoso UK",
+  "tenantUrl": "https://contoso.sharepoint.com",
+  "clientId": "00000000-0000-0000-0000-000000000000",
+  "model": "direct",
+  "groupPrefix": "SP - UK ",
+  "matrixFile": "matrix.csv",
+  "defaultSite": "/sites/Warehouse",
+  "defaultPermission": "Contribute",
+  "rolePermissions": { "General Manager": "Edit" },
+  "adminGroups": [
+    { "group": "SP - IT Admins", "permission": "Full Control" }
+  ],
+  "targets": {
+    "Procedures": { "library": "Forms and Procedures" },
+    "Customers": { "library": "Customers" },
+    "Operations": { "library": "Operations" },
+    "Finance": { "library": "Finance" },
+    "Board": { "library": "Board", "aliases": ["Board Documents"] },
+    "Human Resources": { "library": "Human Resources" },
+    "Everyone": { "library": "Everyone", "fixedGroups": ["SP - UK Everyone"] }
+  },
+  "userFilter": { "domains": ["contoso.co.uk"] },
+  "report": {
+    "fileName": "SharePoint-Access-Report UK",
+    "outputDir": "reports",
+    "archiveDir": "archive",
+    "matrixSheet": "Access Matrix",
+    "targetLabel": "Library",
+    "notesFile": "report-notes.json"
+  }
+}

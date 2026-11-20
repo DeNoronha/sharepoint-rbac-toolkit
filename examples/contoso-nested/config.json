@@ -1,0 +1,30 @@
+{
+  "name": "Contoso NL",
+  "tenantUrl": "https://contoso.sharepoint.com",
+  "clientId": "00000000-0000-0000-0000-000000000000",
+  "model": "nested",
+  "groupPrefix": "SP - NL ",
+  "matrixFile": "matrix.csv",
+  "defaultPermission": "Edit",
+  "everyoneGroup": "SP - NL Everyone",
+  "adminGroups": [
+    { "group": "SP - IT Admins", "permission": "Full Control" }
+  ],
+  "targets": {
+    "Management": { "site": "/sites/Management" },
+    "Finance": { "site": "/sites/Finance" },
+    "HR": { "site": "/sites/HR" },
+    "Sales": { "site": "/sites/Sales" },
+    "Operations": { "site": "/sites/Operations" },
+    "Archive": {}
+  },
+  "userFilter": { "domains": ["contoso.nl"] },
+  "report": {
+    "fileName": "SharePoint-Access-Report NL",
+    "outputDir": "reports",
+    "archiveDir": "archive",
+    "matrixSheet": "Access Matrix",
+    "targetLabel": "Department",
+    "notesFile": "report-notes.json"
+  }
+}

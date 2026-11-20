@@ -1,0 +1,11 @@
+{
+  "summary": [],
+  "notes": [
+    ["=== How to use this workbook ===", ""],
+    ["The matrix tab is yours", "To change which role reaches which department site: add or remove a mark on the Access Matrix tab and send the file back to IT."],
+    ["Do not edit the other tabs", "They are generated from Entra ID. Editing them changes nothing in SharePoint."],
+    ["Role group", "Belongs to a job. People are members of role groups only."],
+    ["Department group", "One per department site. Contains role groups, never people."]
+  ],
+  "noAccess": []
+}

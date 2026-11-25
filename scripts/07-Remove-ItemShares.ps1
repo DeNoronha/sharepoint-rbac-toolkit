@@ -94,7 +94,12 @@ foreach ($group in ($todo | Group-Object SiteUrl)) {
                 else {
                     $spg = $ctx.Web.SiteGroups.GetById($ra.Member.Id); $ctx.Load($spg.Users); $ctx.ExecuteQuery()
                     if (-not ($spg.Users | Where-Object { $_.LoginName -eq $r.LoginName })) { $status = 'already gone'; $planned--; Write-Host '          already gone' -ForegroundColor Green }
-                    elseif ($Apply) { $spg.Users.RemoveByLoginName($r.LoginName); $ctx.ExecuteQuery(); $done++; $status = 'applied' }
+                    elseif ($Apply) {
+                        $spg.Users.RemoveByLoginName($r.LoginName); $ctx.ExecuteQuery(); $done++; $status = 'applied'
+                        # A link nobody is left on still works for whoever has the URL, so remove the link itself
+                        $ctx.Load($spg.Users); $ctx.ExecuteQuery()
+                        if ($spg.Users.Count -eq 0) { $ra.DeleteObject(); $ctx.ExecuteQuery(); $status = 'applied (last person; link removed)'; Write-Host '          link is now empty: link removed' -ForegroundColor DarkGray }
+                    }
                 }
             }
         }
